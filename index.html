@@ -5,208 +5,294 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vikram Kumar - Frontend Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Add Font Awesome for icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --font-size: clamp(1rem, 0.75rem + 1vw, 1.25rem);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            font-size: var(--font-size);
+            line-height: 1.6;
+        }
+        .heading-font {
+            font-family: 'Space Grotesk', sans-serif;
+            letter-spacing: -0.03em;
+        }
+        .floating-label {
+            transition: all 0.2s ease-out;
+        }
+        .floating-input:focus ~ .floating-label,
+        .floating-input:not(:placeholder-shown) ~ .floating-label {
+            transform: translateY(-1.5rem);
+            font-size: 0.875rem;
+        }
+    </style>
 </head>
-<body class="bg-gray-50 ">
+<body class="bg-gray-50">
     <!-- Hero Section -->
-    <section class="container mx-auto px-6 py-8 md:py-16 ">
-        <div class="flex flex-col md:flex-row items-center justify-between">
-            <!-- Left Content -->
-            <div class="md:w-1/2 mb-12 md:mb-0">
-                <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-4" style="font-family: 'Montserrat',sans-serif;">Vikram Kumar
-                    <span class="block text-lg sm:text-xl md:text-xl font-normal text-gray-600 mt-2" style="font-family:'Lora', serif ;">Software Developer</span>
+    <section class="container mx-auto px-6 py-12 md:py-24">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+            <div class="md:w-1/2">
+                <h1 class="text-4xl md:text-5xl xl:text-6xl font-bold text-gray-900 mb-4 heading-font">
+                    Vikram Kumar
+                    <span class="block text-2xl md:text-3xl font-medium text-gray-600 mt-3">Frontend Developer</span>
                 </h1>
-                <p class="text-gray-600 text-lg mb-8 max-w-lg" style="font-family:'Lora', serif ;">
-                    Hi, I'm Vikram, a passionate software engineer specializing in <span class="hover:border-b-2 hover:border-gray-400 ">Front-End</span> development with a strong foundation in building scalable and responsive web applications. As a newcomer in the field, I aim to build dynamic and user-friendly web interfaces using the latest technologies – HTML5, CSS3, JavaScript, and React. These days, I am interested in diving deeper into full-stack development with Node.js, Express.js, and MongoDB to create more integrated and user-friendly applications with efficient backend systems. One thing I am looking to build on is my coding skills, where I am particularly focused on writing clean code, optimizing performance, and seeking ways to enable continuous learning.
+                <p class="text-gray-600 max-w-2xl mb-8">
+                    Hi, I'm Vikram, a passionate software engineer specializing in <span class="font-semibold text-gray-900">Front-End development</span>. 
+                    I build dynamic web interfaces using modern technologies and currently expanding my expertise in full-stack development.
                 </p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="https://drive.google.com/file/d/1NOpznwmcxvx2uLPsXRnLIbEqKIicW9Hn/view?usp=drive_link" target="_blank" class="flex items-center px-6 py-3 border-2 border-gray-400 text-gray-700 rounded-lg hover:bg-gray-200 transition-all" style="font-family:'Lora', serif ;">
-                        <i class="far fa-file-alt mr-2"></i> Resume
+                    <a href="https://drive.google.com/file/d/1NOpznwmcxvx2uLPsXRnLIbEqKIicW9Hn/view?usp=drive_link" 
+                       target="_blank" 
+                       class="px-6 py-3 border-2 border-gray-900 text-gray-900 rounded-lg hover:bg-gray-100 transition-all 
+                              font-medium flex items-center gap-2">
+                        <i class="far fa-file-alt"></i> Resume
                     </a>
-                    <a href="https://github.com/82105" target="_blank" class="flex items-center px-6 py-3 border-2 border-gray-400 text-gray-700 rounded-lg hover:bg-gray-200 transition-all" style="font-family:'Lora', serif ;">
-                        <i class="fab fa-github mr-2"></i> GitHub
-                    </a>
-                    <a href="https://www.linkedin.com/in/im-vikram/" target="_blank" class="flex items-center px-6 py-3 border-2 border-gray-400 text-gray-700 rounded-lg hover:bg-gray-200 transition-all" style="font-family:'Lora', serif ;">
-                        <i class="fab fa-linkedin mr-2"></i> LinkedIn
-                    </a>
-                    <a href="https://x.com/im_vikkuu" target="_blank" class="flex items-center px-6 py-3 border-2 border-gray-400 text-gray-700 rounded-lg hover:bg-gray-200 transition-all" style="font-family:'Lora', serif ;">
-                        <i class="fab fa-twitter mr-2"></i> X
+                    <a href="mailto:kumarvikram01@hotmail.com" 
+                       class="px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-all 
+                              font-medium flex items-center gap-2">
+                        <i class="far fa-paper-plane"></i> Hire Me
                     </a>
                 </div>
             </div>
 
-            <!-- Right Photo -->
             <div class="md:w-1/2 flex justify-center">
                 <div class="w-64 h-64 md:w-80 md:h-80 relative group">
-                    <img src="vikram_img.jpeg" alt="Vikram Kumar" 
-                         class="w-full h-full object-cover rounded-lg shadow-xl transform rotate-3 transition-transform duration-300 group-hover:rotate-0">
+                    <img src="../vikram_img.jpeg" alt="Vikram Kumar" 
+                         class="w-full h-full object-cover rounded-2xl shadow-xl transform rotate-3 transition-transform 
+                                duration-300 group-hover:rotate-0">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Tech Stack Section -->
-    <section class="bg-white py-10">
+    <section class="py-16 bg-white">
         <div class="container mx-auto px-6">
-            <h3 class="text-3xl font-semibold text-gray-800 mb-12 text-center" style="font-family: 'Montserrat',sans-serif;">Tech Stack</h3>
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-4xl mx-auto">
-                <!-- Tech Items -->
-                <div class="p-6 bg-gray-50 rounded-lg text-center hover:shadow-md transition-all duration-300 group">
-                    <div class="inline-block transform transition-transform duration-300 group-hover:scale-125">
-                        <i class="fab fa-js-square text-5xl text-yellow-500 mb-2"></i>
+            <h3 class="text-3xl font-bold text-gray-900 mb-12 text-center heading-font">Tech Stack</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <!-- JavaScript -->
+                <div class="p-6 bg-gray-50 rounded-xl text-center hover:shadow-lg transition-all duration-300 group border border-gray-100">
+                    <div class="inline-block transform transition-transform duration-300 group-hover:scale-110">
+                        <i class="fab fa-js-square text-5xl text-yellow-500 mb-4"></i>
                     </div>
-                    <p class="text-gray-700" style="font-family:'Lora', serif ;">JavaScript</p>
+                    <p class="text-gray-900 font-medium">JavaScript</p>
                 </div>
-                <div class="p-6 bg-gray-50 rounded-lg text-center hover:shadow-md transition-all duration-300 group">
-                    <div class="inline-block transform transition-transform duration-300 group-hover:scale-125">
-                        <i class="fab fa-react text-5xl text-blue-500 mb-2"></i>
+
+                <!-- React -->
+                <div class="p-6 bg-gray-50 rounded-xl text-center hover:shadow-lg transition-all duration-300 group border border-gray-100">
+                    <div class="inline-block transform transition-transform duration-300 group-hover:scale-110">
+                        <i class="fab fa-react text-5xl text-blue-500 mb-4"></i>
                     </div>
-                    <p class="text-gray-700" style="font-family:'Lora', serif ;">React</p>
+                    <p class="text-gray-900 font-medium">React</p>
                 </div>
-                <div class="p-6 bg-gray-50 rounded-lg text-center hover:shadow-md transition-all duration-300 group">
-                    <div class="inline-block transform transition-transform duration-300 group-hover:scale-125">
+
+                <!-- Tailwind -->
+                <div class="p-6 bg-gray-50 rounded-xl text-center hover:shadow-lg transition-all duration-300 group border border-gray-100">
+                    <div class="inline-block transform transition-transform duration-300 group-hover:scale-110">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png" 
-                        class="h-11 w-10 mx-auto mb-2" alt="Tailwind">
+                             class="h-12 w-auto mx-auto mb-4" alt="Tailwind">
                     </div>
-                    <p class="text-gray-700" style="font-family:'Lora', serif ;">Tailwind</p>
+                    <p class="text-gray-900 font-medium">Tailwind CSS</p>
                 </div>
-                <div class="p-6 bg-gray-50 rounded-lg text-center hover:shadow-md transition-all duration-300 group">
-                    <div class="inline-block transform transition-transform duration-300 group-hover:scale-125">
-                        <i class="fab fa-node text-5xl text-green-500 mb-2"></i>
+
+                <!-- Node.js -->
+                <div class="p-6 bg-gray-50 rounded-xl text-center hover:shadow-lg transition-all duration-300 group border border-gray-100">
+                    <div class="inline-block transform transition-transform duration-300 group-hover:scale-110">
+                        <i class="fab fa-node text-5xl text-green-500 mb-4"></i>
                     </div>
-                    <p class="text-gray-700" style="font-family:'Lora', serif ;">Node.js</p>
+                    <p class="text-gray-900 font-medium">Node.js</p>
                 </div>
-                <div class="p-6 bg-gray-50 rounded-lg text-center hover:shadow-md transition-all duration-300 group">
-                    <div class="inline-block transform transition-transform duration-300 group-hover:scale-125">
+
+                <!-- MongoDB -->
+                <div class="p-6 bg-gray-50 rounded-xl text-center hover:shadow-lg transition-all duration-300 group border border-gray-100">
+                    <div class="inline-block transform transition-transform duration-300 group-hover:scale-110">
                         <img src="https://cdn.iconscout.com/icon/free/png-256/free-mongodb-3629020-3030245.png" 
-                        class="h-11 w-10 mx-auto mb-2" alt="MongoDB">
+                             class="h-12 w-auto mx-auto mb-4" alt="MongoDB">
                     </div>
-                    <p class="text-gray-700" style="font-family:'Lora', serif ;">MongoDB</p>
+                    <p class="text-gray-900 font-medium">MongoDB</p>
                 </div>
-                <div class="p-6 bg-gray-50 rounded-lg text-center hover:shadow-md transition-all duration-300 group">
-                    <div class="inline-block transform transition-transform duration-300 group-hover:scale-125">
-                        <img src="pngegg.png" 
-                        class="h-11  mx-auto mb-2" alt="MongoDB">
+
+                <!-- Express.js -->
+                <div class="p-6 bg-gray-50 rounded-xl text-center hover:shadow-lg transition-all duration-300 group border border-gray-100">
+                    <div class="inline-block transform transition-transform duration-300 group-hover:scale-110">
+                        <img src="../pngegg.png" 
+                             class="h-12 w-auto mx-auto mb-4" alt="Express.js">
                     </div>
-                    <p class="text-gray-700" style="font-family:'Lora', serif ;">Express.js</p>
+                    <p class="text-gray-900 font-medium">Express.js</p>
                 </div>
-                <div class="p-6 bg-gray-50 rounded-lg text-center hover:shadow-md transition-all duration-300 group">
-                    <div class="inline-block transform transition-transform duration-300 group-hover:scale-125">
-                        <img src="redux.png" 
-                        class="h-11  mx-auto mb-2" alt="MongoDB">
+
+                <!-- Redux -->
+                <div class="p-6 bg-gray-50 rounded-xl text-center hover:shadow-lg transition-all duration-300 group border border-gray-100">
+                    <div class="inline-block transform transition-transform duration-300 group-hover:scale-110">
+                        <img src="../redux.png" 
+                             class="h-12 w-auto mx-auto mb-4" alt="Redux">
                     </div>
-                    <p class="text-gray-700" style="font-family:'Lora', serif ;">Redux</p>
+                    <p class="text-gray-900 font-medium">Redux</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section class="container mx-auto px-6 py-16">
-        <h3 class="text-3xl font-semibold text-gray-800 mb-12 text-center" style="font-family: 'Montserrat',sans-serif;">Featured Projects</h3>
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- Project 1 -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                <div class="h-48 bg-gray-200"></div>
-                <div class="p-6">
-                    <h4 class="text-xl font-semibold mb-2" style="font-family: 'Montserrat',sans-serif;">E-Commerce Platform</h4>
-                    <p class="text-gray-600 mb-4" style="font-family:'Lora', serif ;">Modern e-commerce solution with product management, cart, and checkout system.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">React</span>
-                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Node.js</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">MongoDB</span>
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold text-gray-900 mb-12 text-center heading-font">Featured Projects</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <div class="h-56 bg-gray-200 relative">
+                        <!-- Add project image here -->
                     </div>
-                    <div class="flex gap-4">
-                        <a href="#" class="text-blue-600 hover:underline">Live Demo</a>
-                        <a href="#" class="text-gray-600 hover:underline">GitHub</a>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 heading-font">E-Commerce Platform</h4>
+                        <p class="text-gray-600 mb-4">Modern e-commerce solution with product management and checkout system.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">React</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">Node.js</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">MongoDB</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-blue-600 hover:underline font-medium">Demo</a>
+                            <a href="#" class="text-gray-600 hover:underline font-medium">Code</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Project 2 & 3 would follow similar structure -->
+                <!-- Add more project cards as needed -->
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class=" py-10 bg-white" id="contact">
-        <div class="max-w-2xl mx-auto">
-            <h3 class="text-3xl font-semibold text-gray-800 mb-12 text-center" style="font-family: 'Montserrat',sans-serif;">Contact Me</h3>
-            
-            <!-- Contact Form -->
-            <form id="contactForm" class="space-y-6">
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="relative">
-                        <input type="text" id="name" required
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg peer focus:outline-none focus:border-blue-500"
-                            placeholder=" ">
-                        <label for="name" 
-                            class="absolute left-4 top-3 px-1 bg-white text-gray-500 transition-all duration-200 
-                                   peer-placeholder-shown:top-3 peer-placeholder-shown:text-base
-                                   peer-focus:-top-2 peer-focus:text-sm peer-focus:text-blue-500">
-                            Name
-                        </label>
-                    </div>
-                    
-                    <div class="relative">
-                        <input type="email" id="email" required
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg peer focus:outline-none focus:border-blue-500"
-                            placeholder=" ">
-                        <label for="email" 
-                            class="absolute left-4 top-3 px-1 bg-white text-gray-500 transition-all duration-200 
-                                   peer-placeholder-shown:top-3 peer-placeholder-shown:text-base
-                                   peer-focus:-top-2 peer-focus:text-sm peer-focus:text-blue-500">
-                            Email
-                        </label>
+    <section class="py-20 bg-white" id="contact">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Let's Connect Section -->
+                <div class="space-y-8">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6 heading-font">Let's Connect</h3>
+                    <div class="space-y-6">
+                        <a href="https://x.com/im_vikkuu" target="_blank" 
+                           class="flex items-center gap-4 text-gray-600 hover:text-gray-900 transition-colors">
+                            <i class="fab fa-twitter text-2xl w-8"></i>
+                            <span class="font-medium">Twitter/X</span>
+                        </a>
+                        <a href="https://github.com/82105" target="_blank" 
+                           class="flex items-center gap-4 text-gray-600 hover:text-gray-900 transition-colors">
+                            <i class="fab fa-github text-2xl w-8"></i>
+                            <span class="font-medium">GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/im-vikram/" target="_blank" 
+                           class="flex items-center gap-4 text-gray-600 hover:text-gray-900 transition-colors">
+                            <i class="fab fa-linkedin text-2xl w-8"></i>
+                            <span class="font-medium">LinkedIn</span>
+                        </a>
+                        <a href="mailto:kumarvikram01@hotmail.com" 
+                           class="flex items-center gap-4 text-gray-600 hover:text-gray-900 transition-colors">
+                            <i class="far fa-envelope text-2xl w-8"></i>
+                            <span class="font-medium">Email Me</span>
+                        </a>
+                        <!-- Buy Me a Coffee -->
+                        <a href="https://www.buymeacoffee.com/yourusername" target="_blank" 
+                           class="flex items-center gap-4 text-gray-600 hover:text-gray-900 transition-colors">
+                            <i class="fas fa-mug-hot text-2xl w-8"></i>
+                            <span class="font-medium">Buy Me a Coffee</span>
+                        </a>
                     </div>
                 </div>
 
-                <div class="relative">
-                    <textarea id="message" rows="4" required
-                        class="w-full px-4 py-3 border border-gray-300 rounded-lg peer focus:outline-none focus:border-blue-500"
-                        placeholder=" "></textarea>
-                    <label for="message" 
-                        class="absolute left-4 top-3 px-1 bg-white text-gray-500 transition-all duration-200 
-                               peer-placeholder-shown:top-3 peer-placeholder-shown:text-base
-                               peer-focus:-top-2 peer-focus:text-sm peer-focus:text-blue-500">
-                        Message
-                    </label>
+                <!-- Contact Form -->
+                <div>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-8 heading-font">Send a Message</h3>
+                    <form id="contactForm" class="space-y-6">
+                        <div class="relative">
+                            <input type="text" id="name" required
+                                class="floating-input w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 
+                                       focus:ring-gray-900 focus:border-transparent peer"
+                                placeholder=" ">
+                            <label for="name" 
+                                class="floating-label absolute left-4 top-3 px-1 bg-white text-gray-500 
+                                       peer-focus:text-gray-900">
+                                Full Name
+                            </label>
+                        </div>
+
+                        <div class="relative">
+                            <input type="email" id="email" required
+                                class="floating-input w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 
+                                       focus:ring-gray-900 focus:border-transparent peer"
+                                placeholder=" ">
+                            <label for="email" 
+                                class="floating-label absolute left-4 top-3 px-1 bg-white text-gray-500 
+                                       peer-focus:text-gray-900">
+                                Email Address
+                            </label>
+                        </div>
+
+                        <div class="relative">
+                            <textarea id="message" rows="4" required
+                                class="floating-input w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 
+                                       focus:ring-gray-900 focus:border-transparent peer"
+                                placeholder=" "></textarea>
+                            <label for="message" 
+                                class="floating-label absolute left-4 top-3 px-1 bg-white text-gray-500 
+                                       peer-focus:text-gray-900">
+                                Your Message
+                            </label>
+                        </div>
+
+                        <button type="submit" 
+                            class="w-full bg-gray-900 text-white py-3 px-6 rounded-lg hover:bg-gray-800 
+                                   transition-all font-medium">
+                            Send Message
+                        </button>
+                    </form>
+
+                    <!-- Success Message -->
+                    <div id="successMessage" class="hidden mt-6 p-4 bg-green-50 text-green-700 rounded-lg text-center border border-green-100">
+                        <i class="fas fa-check-circle mr-2"></i>
+                        Thank you! Your message has been received.
+                    </div>
                 </div>
-
-                <button type="submit" 
-                    class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-all
-                           hover:shadow-md" style="font-family:'Lora', serif ;">
-                    Send Message
-                </button>
-            </form>
-
-            <!-- Success Message (Hidden by default) -->
-            <div id="successMessage" class="hidden mt-6 p-4 bg-green-100 text-green-700 rounded-lg text-center" style="font-family:'Lora', serif ;">
-                <i class="fas fa-check-circle mr-2"></i>
-                Thank you! Your message has been received.
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class=" bg-gray-800 text-white py-8">
-        <div class=" px-12">
-            <div class="flex flex-col items-center justify-between md:flex-row">
-                <div class="text-center md:text-left mb-4 md:mb-0">
-                    <p class="text-gray-400">&copy; 2025 Vikram Kumar. All rights reserved.</p>
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+                <div class="space-y-4">
+                    <h4 class="text-white font-medium heading-font mb-2">Vikram Kumar</h4>
+                    <p class="max-w-xs mx-auto md:mx-0">Building digital experiences with precision and passion</p>
                 </div>
-                <div class="flex space-x-6">
-                    <a href="https://github.com/82105" target="_blank" class="text-gray-300 hover:text-white transition-colors">
-                        <i class="fab fa-github text-2xl"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/im-vikram/" target="_blank" class="text-gray-300 hover:text-white transition-colors">
-                        <i class="fab fa-linkedin text-2xl"></i>
-                    </a>
-                    <a href="https://x.com/im_vikkuu" target="_blank" class="text-gray-300 hover:text-white transition-colors">
-                        <i class="fab fa-twitter text-2xl"></i>
-                    </a>
+                <div class="space-y-4">
+                    <h4 class="text-white font-medium heading-font mb-2">Quick Links</h4>
+                    <div class="flex flex-col space-y-2">
+                        <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+                        <a href="https://drive.google.com/file/d/1NOpznwmcxvx2uLPsXRnLIbEqKIicW9Hn/view?usp=drive_link" 
+                           target="_blank" class="hover:text-white transition-colors">Resume</a>
+                    </div>
                 </div>
+                <div class="space-y-4">
+                    <h4 class="text-white font-medium heading-font mb-2">Connect</h4>
+                    <div class="flex justify-center md:justify-start space-x-6">
+                        <a href="https://github.com/82105" target="_blank" class="hover:text-white transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/im-vikram/" target="_blank" class="hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://x.com/im_vikkuu" target="_blank" class="hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-sm">
+                <p>&copy; 2024 Vikram Kumar. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -215,16 +301,36 @@
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Show success message
-            document.getElementById('successMessage').classList.remove('hidden');
+            // Simple validation
+            const inputs = this.querySelectorAll('input, textarea');
+            let isValid = true;
             
-            // Reset form
-            this.reset();
-            
-            // Hide message after 5 seconds
-            setTimeout(() => {
-                document.getElementById('successMessage').classList.add('hidden');
-            }, 5000);
+            inputs.forEach(input => {
+                if (!input.checkValidity()) {
+                    isValid = false;
+                    input.classList.add('border-red-500');
+                } else {
+                    input.classList.remove('border-red-500');
+                }
+            });
+
+            if (isValid) {
+                document.getElementById('successMessage').classList.remove('hidden');
+                this.reset();
+                
+                setTimeout(() => {
+                    document.getElementById('successMessage').classList.add('hidden');
+                }, 5000);
+            }
+        });
+
+        // Add real-time validation
+        document.querySelectorAll('.floating-input').forEach(input => {
+            input.addEventListener('input', () => {
+                if (input.checkValidity()) {
+                    input.classList.remove('border-red-500');
+                }
+            });
         });
     </script>
 </body>
